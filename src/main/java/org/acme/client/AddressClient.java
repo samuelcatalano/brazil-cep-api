@@ -1,4 +1,4 @@
-package org.acme.rest;
+package org.acme.client;
 
 import org.acme.model.Address;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/ws")
 @RegisterRestClient
-public interface AddressService {
+public interface AddressClient {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
