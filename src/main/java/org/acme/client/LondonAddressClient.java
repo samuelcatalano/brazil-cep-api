@@ -1,6 +1,6 @@
 package org.acme.client;
 
-import org.acme.model.Address;
+import org.acme.model.LondonInfo;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import javax.ws.rs.GET;
@@ -9,12 +9,12 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/ws")
+@Path("/postcodes")
 @RegisterRestClient
-public interface AddressClient {
+public interface LondonAddressClient {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("{cep}/json")
-    Address getAddressInfo(@PathParam(value = "cep") final String cep);
+    @Path("/{postcode}")
+    LondonInfo getAddressInfo(@PathParam(value = "postcode") final String postcode);
 }

@@ -11,7 +11,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class Address implements Serializable {
+public class BrazilAddress implements Serializable {
 
     private String cep;
     private String logradouro;

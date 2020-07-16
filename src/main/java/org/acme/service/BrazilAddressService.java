@@ -1,8 +1,8 @@
 package org.acme.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.acme.model.Address;
-import org.acme.client.AddressClient;
+import org.acme.model.BrazilAddress;
+import org.acme.client.BrazilAddressClient;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -10,20 +10,20 @@ import javax.inject.Inject;
 
 @Slf4j
 @ApplicationScoped
-public class AddressService {
+public class BrazilAddressService {
 
     @Inject
     @RestClient
-    AddressClient addressClient;
+    BrazilAddressClient brazilAddressClient;
 
     /**
      * Returns the address by CEP.
-     * @param cep
+     * @param cep the cep
      * @return the address by CEP
      * @throws Exception
      */
-    public Address getAddressInfo(final String cep) throws Exception {
-        var address = this.addressClient.getAddressInfo(cep);
+    public BrazilAddress getAddressInfo(final String cep) throws Exception {
+        var address = this.brazilAddressClient.getAddressInfo(cep);
         if (address == null) {
             log.error("Error getting address with this CEP {}: ", cep);
             throw new Exception("There is no address with this CEP!");
