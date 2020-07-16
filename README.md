@@ -1,4 +1,4 @@
-# poc project
+# Brazil CEP API (POC project using Quarkus.io)
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
