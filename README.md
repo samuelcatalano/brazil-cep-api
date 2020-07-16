@@ -1,4 +1,4 @@
-# Brazil and UK postcode API (POC project using Quarkus.io)
+# Brazil and UK postcode API (Quarkus.io)
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
